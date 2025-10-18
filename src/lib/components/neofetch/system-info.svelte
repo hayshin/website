@@ -13,8 +13,8 @@
   <dl class="system-info">
     {#each Object.entries(systemInfo) as [term, description] (term)}
       <div class="item">
-        <dt>{term}</dt>
-        <dd>: {description}</dd>
+        <dt>{term}:&nbsp;</dt>
+        <dd>{description}</dd>
       </div>
     {/each}
   </dl>
@@ -27,7 +27,7 @@
 
   .system-info dt {
     margin: 0;
-    display: inline;
+    display: inline-block;
     font-family: var(--font-family);
     font-size: var(--font-size);
     line-height: var(--line-height);
@@ -45,5 +45,11 @@
 
   .system-info dd {
     margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .system-info .item {
+      flex-wrap: wrap;
+    }
   }
 </style>
