@@ -16,38 +16,46 @@
         ██████          ██████
           ██████          ██████
             █████           █████
-
-
 `;
 
   const definitions: Record<string, string> = {
-    'OS': 'NixOS 25.11 (Xantusia) x86_64',
-    'Host': 'MCLG-XX (M1010)',
-    'Kernel': 'Linux 6.12.51',
-    'Uptime': '18 hours, 36 mins',
-    'Packages': '980 (nix-system), 12',
-    'Shell': 'nushell 0.106.1',
-    'Display (BOE0A74)': '1920x1200',
-    'WM': 'Hyprland 0.51.1 (Wayland)',
-    'Theme': 'adw-gtk3 [GTK2/3/4]',
-    'Font': 'DejaVu Sans (14pt) [GTK2]',
-    'Cursor': 'Bibata-Modern-Ice (24pt)',
-    'Terminal': 'kitty 0.43.1',
-    'Terminal Font': 'JetBrainsMonoNF',
-    'CPU': '13th Gen Intel(R) Core(TM)',
-    'GPU': 'Intel Iris Xe Graphics',
-    'Memory': '6.77 GiB / 15.34 GiB',
-    'Swap': '0 B / 8.80 GiB (0%)',
-    'Disk (/)': '476.44 GiB / 630.82 GiB',
-    'Local IP (wlp0s20f3)': '192.168.4',
-    'Battery (HB5489P9EGW-31A)': '16%',
-    'Locale': 'en_GB.UTF-8',
+    'OS': 'Kazakh 25.11 x86_64',
+    'Host': 'Dauren Baimurza',
+    'Kernel': 'Homo Sapiens v2.28',
+    'Uptime': '20 years, 2 months',
+    'Shell': 'Yellow',
+    'Theme': 'Minimalism & optimism',
+    'Role': 'Software Engineer',
+    'Languages': 'TypeScript, Python, Java, Rust, SQL',
+    'Packages': 'Docker, Git, Nginx',
+    'Memory': '0.5 birthdates of friends / 13',
+    'CPU': '2-Core@89 IQ',
+    'GPU': 'OD -3.5D; OS -2.75D',
+    'Disk (/)': '51.44 GiB / 128 GiB (39.8%)',
+    'Location': 'Almaty, Kazakhstan (UTC+5)',
+    'Locale': 'ru_RU, en_GB, kk_KZ (UTF-8)',
+    'Email': 'hello@hayshin.dev',
+    'Website': 'https://hayshin.dev',
+    'GitHub': 'https://github.com/hayshin',
+    'LinkedIn': 'https://linkedin.com/in/hayshin',
+    'Telegram': 'https://telegram.com/hayshinbj',
   };
 </script>
 
-<Neofetch
-  systemName="hayshin@matte"
-  systemInfo={definitions}
-  {logo}
-  alt="Logo"
-/>
+<div class="container">
+  <Neofetch
+    systemName="hayshin@bj"
+    systemInfo={definitions}
+    {logo}
+    alt="Logo of left bit shift operator <<"
+  />
+</div>
+
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+</style>
