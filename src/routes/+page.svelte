@@ -1,21 +1,24 @@
 <script lang="ts">
-  import SystemInfo from '$lib/components/neofetch/system-info.svelte';
+  import Neofetch from '$lib/components/neofetch/neofetch.svelte';
 
   const logo = `
-      ░▓██░     ░▒███░
-    ░▓███▓░   ░▒████▒░
-  ░▓███▓░   ░▒████▒░
-░░▓███▓░   ░▒████▒░
-░▓███▓░░  ░▒████▒░
-░▓███▒░    ░████▒░
-░▓███▓░    ░████▒░
-░▒███▓░░  ░▒████▒░
-░░▓███▓░░  ░▒████▒░
-  ░▓███▒░   ░▒████▒░
-    ░▒███▓░   ░▒████▒
-      ░▓██░     ░▒███░
-        ░░        ░░
-          `;
+            █████           █████
+          ██████          ██████
+        ██████          ██████
+      ██████          ██████
+    ██████          ██████
+  ██████          ██████
+██████          ██████
+██████          ██████
+  ██████          ██████
+    ██████          ██████
+      ██████          ██████
+        ██████          ██████
+          ██████          ██████
+            █████           █████
+
+
+`;
 
   const definitions: Record<string, string> = {
     'OS': 'NixOS 25.11 (Xantusia) x86_64',
@@ -42,7 +45,9 @@
   };
 </script>
 
-<SystemInfo
+<Neofetch
   systemName="hayshin@matte"
   systemInfo={definitions}
+  {logo}
+  alt="Logo"
 />

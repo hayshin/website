@@ -9,6 +9,6 @@
 
 <figure aria-label={alt}>
   <pre aria-hidden="true">
-        {logo}
+            {logo}
     </pre>
 </figure>

@@ -7,16 +7,18 @@
   const { systemName, systemInfo }: Props = $props();
 </script>
 
-<h1 class="system-name">{systemName}</h1>
-<p>-------------</p>
-<dl class="system-info">
-  {#each Object.entries(systemInfo) as [term, description] (term)}
-    <div class="item">
-      <dt>{term}</dt>
-      <dd>: {description}</dd>
-    </div>
-  {/each}
-</dl>
+<div class="system-info-container">
+  <h1 class="system-name">{systemName}</h1>
+  <p>-------------</p>
+  <dl class="system-info">
+    {#each Object.entries(systemInfo) as [term, description] (term)}
+      <div class="item">
+        <dt>{term}</dt>
+        <dd>: {description}</dd>
+      </div>
+    {/each}
+  </dl>
+</div>
 
 <style>
   .system-name {
