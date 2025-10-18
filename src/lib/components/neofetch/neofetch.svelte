@@ -31,6 +31,7 @@
     display: flex;
     align-items: center;
     gap: 3ch;
+    padding: 1ch;
   }
 
   /* On smaller screens, stack vertically */
@@ -38,6 +39,10 @@
     .neofetch-container {
       flex-direction: column;
       gap: 1ch;
+      align-items: flex-start;
+      overflow-y: auto;
+      overflow-x: auto;
+      max-height: 100vh;
     }
   }
 </style>

@@ -17,14 +17,26 @@
   figure {
     margin: 0;
     padding: 0;
+    min-width: 0; /* Allow flex to shrink below content size */
+  }
+
+  pre {
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   /* On smaller screens, center the logo */
   @media (max-width: 768px) {
     figure {
-      width: 100%;
       display: flex;
       justify-content: center;
+      width: 100%;
+    }
+
+    pre {
+      max-width: 100%;
+      overflow-x: hidden;
     }
   }
 </style>

@@ -26,7 +26,7 @@
     'Shell': 'Yellow',
     'Theme': 'Minimalism & optimism',
     'Role': 'Software Engineer',
-    'Languages': 'TypeScript, Python, Java, Rust, SQL',
+    'Languages': 'TypeScript, Python, Java, Rust',
     'Packages': 'Docker, Git, Nginx',
     'Memory': '0.5 birthdates of friends / 13',
     'CPU': '2-Core@89 IQ',
