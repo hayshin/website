@@ -19,7 +19,7 @@
 `;
 
   const definitions: Record<string, string> = {
-    'OS': 'Kazakh 25.11 x86_64',
+    'OS': 'Asian 25.11 (Kazakh) x86_64',
     'Host': 'Dauren Baimurza',
     'Kernel': 'Homo Sapiens v2.28',
     'Uptime': '20 years, 2 months',
@@ -27,18 +27,17 @@
     'Theme': 'Minimalism & optimism',
     'Role': 'Software Engineer',
     'Languages': 'TypeScript, Python, Java, Rust',
-    'Packages': 'Docker, Git, Nginx',
-    'Memory': '0.5 birthdates of friends / 13',
+    'Packages': '26 (in-house), 15 (deprecated)',
+    'Memory': "0.5 / 13 (friends' birthdays)",
     'CPU': '2-Core@89 IQ',
-    'GPU': 'OD -3.5D; OS -2.75D',
-    'Disk (/)': '51.44 GiB / 128 GiB (39.8%)',
+    'GPU': 'Right Eye -3.5D; Left Eye -2.75D',
+    'Disk (/)': '51.44 KiG / 76 KiG (39.8%)',
     'Location': 'Almaty, Kazakhstan (UTC+5)',
     'Locale': 'ru_RU, en_GB, kk_KZ (UTF-8)',
     'Email': 'hello@hayshin.dev',
-    'Website': 'https://hayshin.dev',
     'GitHub': 'https://github.com/hayshin',
     'LinkedIn': 'https://linkedin.com/in/hayshin',
-    'Telegram': 'https://telegram.com/hayshinbj',
+    'Telegram': 'https://t.me/hayshinbj',
   };
 </script>
 
