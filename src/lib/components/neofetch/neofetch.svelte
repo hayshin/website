@@ -90,9 +90,6 @@
       flex-direction: column;
       gap: 1ch;
       align-items: flex-start;
-      overflow-y: auto;
-      overflow-x: auto;
-      max-height: 100vh;
     }
   }
 </style>
