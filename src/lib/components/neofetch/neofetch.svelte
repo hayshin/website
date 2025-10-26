@@ -1,19 +1,17 @@
 <script lang="ts">
+  import type { Snippet } from 'svelte';
+
   interface Props {
     systemName: string;
-    systemInfo: Record<string, string>;
+    systemInfo: Record<string, string | Snippet>;
     logo?: string;
     alt?: string;
-    links?: {
-      label: string;
-      url: string;
-    }[];
   }
 
   import Logo from '$lib/components/neofetch/logo.svelte';
   import SystemInfo from '$lib/components/neofetch/system-info.svelte';
 
-  let { systemName, systemInfo, logo = '', alt = 'Logo', links = [] }: Props = $props();
+  let { systemName, systemInfo, logo = '', alt = 'Logo' }: Props = $props();
 </script>
 
 <div class="neofetch-container">
@@ -26,7 +24,6 @@
   <SystemInfo
     {systemName}
     {systemInfo}
-    {links}
   />
 </div>
 

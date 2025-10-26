@@ -1,14 +1,12 @@
 <script lang="ts">
+  import type { Snippet } from 'svelte';
+
   interface Props {
     systemName: string;
-    systemInfo: Record<string, string>;
-    links?: {
-      label: string;
-      url: string;
-    }[];
+    systemInfo: Record<string, string | Snippet>;
   }
 
-  const { systemName, systemInfo, links = [] }: Props = $props();
+  const { systemName, systemInfo }: Props = $props();
 </script>
 
 <div class="system-info-container">
@@ -18,19 +16,15 @@
     {#each Object.entries(systemInfo) as [term, description] (term)}
       <div class="item">
         <dt>{term}:&nbsp;</dt>
-        <dd>{description}</dd>
-      </div>
-    {/each}
-    {#if links.length > 0}
-      <div class="item">
-        <dt>Links:&nbsp;</dt>
         <dd>
-          {#each links as link}
-            <a href={link.url}>{link.label}</a>&nbsp;
-          {/each}
+          {#if typeof description === 'function'}
+            {@render description()}
+          {:else}
+            {description}
+          {/if}
         </dd>
       </div>
-    {/if}
+    {/each}
   </dl>
 </div>
 
@@ -61,7 +55,7 @@
     margin: 0;
   }
 
-  .system-info a {
+  .system-info dd :global(a) {
     color: var(--gb-blue);
   }
 
