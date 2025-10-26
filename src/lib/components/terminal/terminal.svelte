@@ -19,20 +19,12 @@
   $effect(() => {
     // Scroll to bottom whenever command history changes with smooth animation
     if (outputElement && commandHistory.length > 0) {
-      // Use smooth scroll on desktop, instant on mobile for better keyboard handling
-      const isMobile = window.innerWidth <= 768;
-
-      if (isMobile) {
-        // Instant scroll on mobile + delay to account for keyboard
-        requestAnimationFrame(() => {
-          outputElement.scrollTop = outputElement.scrollHeight;
-        });
-      } else {
+      requestAnimationFrame(() => {
         outputElement.scroll({
           top: outputElement.scrollHeight,
           behavior: 'smooth',
         });
-      }
+      });
     }
   });
 
