@@ -15,7 +15,7 @@
   <dl class="system-info">
     {#each Object.entries(systemInfo) as [term, description] (term)}
       <div class="item">
-        <dt>{term}:&nbsp;</dt>
+        <dt>{term}:</dt>
         <dd>
           {#if typeof description === 'function'}
             {@render description()}
@@ -44,24 +44,27 @@
   }
 
   .system-info .item {
-    display: flex;
+    display: inline;
   }
 
   .system-info dt {
     font-weight: bold;
+    display: inline;
   }
 
   .system-info dd {
     margin: 0;
+    display: inline;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .system-info .item::after {
+    content: '';
+    display: block;
   }
 
   .system-info dd :global(a) {
     color: var(--gb-blue);
-  }
-
-  @media (max-width: 768px) {
-    .system-info .item {
-      flex-wrap: wrap;
-    }
   }
 </style>
