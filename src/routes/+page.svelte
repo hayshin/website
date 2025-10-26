@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Neofetch from '$lib/components/neofetch/neofetch.svelte';
+  import Terminal from '$lib/components/terminal/terminal.svelte';
   import SEO from '$lib/components/seo/seo.svelte';
   import StructuredData from '$lib/components/seo/structured-data.svelte';
 
@@ -47,7 +47,7 @@
 <StructuredData data={structuredData} />
 
 <main class="container">
-  <Neofetch />
+  <Terminal />
 </main>
 
 <style>
