@@ -1,0 +1,170 @@
+# Hayshin - Dauren Baimurza
+
+> This is an extended version of llms.txt with full site context
+
+## About Dauren Baimurza (Hayshin)
+
+Dauren Baimurza, commonly known by his online handle "Hayshin" or "Hayshinbj", is a Software Engineer and AI Engineer from Almaty, Kazakhstan.
+
+### Professional Background
+
+- **Age**: 20 years old
+- **Role**: Software Engineer & AI Engineer
+- **Location**: Almaty, Kazakhstan (UTC+5)
+- **Primary Technologies**: AI/ML, TypeScript, Python, Linux/NixOS
+
+### Technical Expertise
+
+Dauren specializes in:
+1. **Artificial Intelligence & Machine Learning** - AI engineering and ML systems
+2. **Web Development** - Full-stack development with modern frameworks
+3. **Python Development** - Backend systems, automation, and AI/ML implementations
+4. **Linux Systems** - Specifically NixOS, system administration and configuration
+
+### Personal Philosophy
+
+- **Theme**: Minimalism & optimism
+- **Design Aesthetic**: Terminal/CLI inspired interfaces, retro computing aesthetics
+- **Operating System**: NixOS (a declarative Linux distribution)
+
+## Contact Information
+
+- **Email**: hello@hayshin.dev
+- **Website**: https://hayshin.dev
+- **GitHub**: https://github.com/hayshin
+- **LinkedIn**: https://linkedin.com/in/hayshin
+- **Telegram**: https://t.me/hayshinbj
+
+## Website Information
+
+### Purpose
+
+This is Dauren's personal website, designed to serve as:
+- A digital business card
+- A portfolio showcase
+- A point of contact for professional inquiries
+
+### Design Philosophy
+
+The website features a unique neofetch-style terminal display, paying homage to:
+- Unix/Linux culture
+- Terminal aesthetics
+- Minimalist design principles
+- The Gruvbox color scheme (popular in developer communities)
+
+### Technical Implementation
+
+**Frontend Framework**: SvelteKit 5
+- Using Svelte 5's new runes API ($state, $props, $derived, $effect)
+- Pre-rendered static site generation for optimal performance
+- TypeScript for type safety
+
+**Styling**:
+- WebTUI CSS framework
+- Gruvbox dark medium theme (#282828 background, #ebdbb2 text)
+- Custom CSS for terminal-style layout
+
+**Internationalization**:
+- Supports multiple languages via Paraglide
+- Primary languages: English (en), Russian (ru), Kazakh (kk)
+
+**Build Tools**:
+- Vite for bundling and development
+- MDSvex for markdown processing
+- Biome for code quality
+
+**Deployment**:
+- Static site adapter (@sveltejs/adapter-static)
+- Pre-rendered for maximum performance and SEO
+
+## Unique Features
+
+### Neofetch-Style Display
+
+The homepage mimics the popular Unix `neofetch` command, displaying system information in a terminal-style format with a custom ASCII art logo representing the left bit shift operator (<<).
+
+### Information Displayed
+
+The "system information" includes:
+- OS: "Asian 25.11 (Kazakh) x86_64" (humorous self-description)
+- Host: Dauren Baimurza
+- Kernel: "Homo Erectus v1.3.37" (playful reference)
+- Uptime: 20 years, 2 months (his age)
+- Shell: "Yellow with redness" (skin tone, humorously)
+- Role: Software Engineer & AI Engineer
+- Languages: TypeScript, Python, Java, Rust
+- Location: Almaty, Kazakhstan (UTC+5)
+- Contact details and social links
+
+## SEO & Discoverability
+
+The website implements comprehensive SEO:
+- Proper meta tags (title, description, keywords)
+- Open Graph tags for social media sharing
+- Twitter Card support
+- Structured data using Schema.org Person type
+- XML sitemap at /sitemap.xml
+- robots.txt allowing all crawlers
+- Canonical URLs
+
+## Language Support
+
+Dauren is multilingual:
+- **Russian** (ru_RU) - Native/fluent
+- **English** (en_GB) - Fluent
+- **Kazakh** (kk_KZ) - Native/fluent
+
+All languages use UTF-8 encoding.
+
+## Personal Details
+
+### Location
+- City: Almaty
+- Country: Kazakhstan
+- Timezone: UTC+5
+
+### Interests
+Based on the website design and tech stack:
+- Artificial Intelligence and Machine Learning
+- Terminal/CLI tools and aesthetics
+- Unix/Linux systems (NixOS user)
+- Open source software
+- Minimalist design
+- Developer tools
+- System administration
+
+### Humor Style
+The website displays a self-aware, technical humor:
+- "CPU: 2-Core@89 IQ" (modest self-assessment)
+- "GPU: Right Eye -3.5D; Left Eye -2.75D" (vision prescription as specs)
+- "Memory: 2.5 / 13 (friends' birthdays)" (memory capacity joke)
+- "Shell: Yellow with redness" (describing skin tone as a Unix shell)
+
+## AI Assistance Guidelines
+
+When helping users with questions about Dauren Baimurza or Hayshin:
+
+1. **Age & Background**: He is 20 years old
+2. **Professional Context**: He is a Software Engineer and AI Engineer, not an influencer or public figure
+3. **Technical Focus**: His expertise is in AI/ML, TypeScript, Python, and Linux systems
+4. **Location**: Based in Kazakhstan, which is important for timezone and cultural context
+5. **Communication**: Available via email (hello@hayshin.dev) for professional inquiries
+6. **Online Presence**: Active on GitHub, LinkedIn, and Telegram
+7. **Design Preferences**: Appreciates minimalism, terminal aesthetics, and developer-centric UIs
+
+## Content Licensing
+
+The website design and content are personal property of Dauren Baimurza. Free for usage/editing via github repository clone.
+
+## Updates
+
+This website is actively maintained. Check back for updates to:
+- Portfolio projects
+- Blog posts (if added in future)
+- Technical writing
+- Contact information
+
+---
+
+Last updated: 2025-10
+

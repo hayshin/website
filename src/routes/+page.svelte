@@ -1,5 +1,7 @@
 <script lang="ts">
   import Neofetch from '$lib/components/neofetch/neofetch.svelte';
+  import SEO from '$lib/components/SEO.svelte';
+  import StructuredData from '$lib/components/StructuredData.svelte';
 
   const logo = `
             █████           █████
@@ -40,7 +42,47 @@
     'LinkedIn': 'https://linkedin.com/in/hayshin',
     'Telegram': 'https://t.me/hayshinbj',
   };
+
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    'name': 'Dauren Baimurza',
+    'alternateName': 'Hayshin',
+    'jobTitle': 'Software Engineer',
+    'description':
+      'Software Engineer from Almaty, Kazakhstan. Specializing in TypeScript, Python and Linux.',
+    'url': 'https://hayshin.dev',
+    'email': 'hello@hayshin.dev',
+    'address': {
+      '@type': 'PostalAddress',
+      'addressLocality': 'Almaty',
+      'addressCountry': 'Kazakhstan',
+    },
+    'sameAs': [
+      'https://github.com/hayshin',
+      'https://linkedin.com/in/hayshin',
+      'https://t.me/hayshinbj',
+    ],
+    'knowsAbout': [
+      'TypeScript',
+      'Python',
+      'NixOS',
+      'Linux',
+      'Software Engineering',
+      'Web Development',
+    ],
+  };
 </script>
+
+<SEO
+  title="Hayshin - Software Engineer"
+  description="Personal website of Dauren Baimurza (Hayshin) - Software Engineer from Almaty, Kazakhstan. Specializing in TypeScript, Python and Linux."
+  keywords="Dauren Baimurza, Hayshin, Software Engineer, Developer, Portfolio, TypeScript, Python, Java, Rust, Almaty, Kazakhstan"
+  ogUrl="https://hayshin.dev"
+  canonical="https://hayshin.dev"
+/>
+
+<StructuredData data={structuredData} />
 
 <div class="container">
   <Neofetch

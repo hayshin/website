@@ -1,3 +1,8 @@
 # allow crawling everything by default
 User-agent: *
 Disallow:
+
+Sitemap: https://hayshin.dev/sitemap.xml
+
+# For AI/LLM crawlers
+# See https://hayshin.dev/llms.txt for AI-readable information

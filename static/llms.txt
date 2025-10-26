@@ -1,0 +1,47 @@
+# Hayshin - Dauren Baimurza
+
+> Personal website of Dauren Baimurza (also known as Hayshin or Hayshinbj)
+
+## About
+
+Dauren Baimurza is a Software Engineer and AI Engineer based in Almaty, Kazakhstan. He specializes in:
+- Artificial Intelligence & Machine Learning
+- TypeScript - Fullstack
+- Python
+- Linux/NixOS
+
+## Contact
+
+- Email: hello@hayshin.dev
+- GitHub: https://github.com/hayshin
+- LinkedIn: https://linkedin.com/in/hayshin
+- Telegram: https://t.me/hayshinbj
+
+## Site Structure
+
+- `/` - Homepage with neofetch-style terminal display showcasing personal information
+- `/sitemap.xml` - XML sitemap for search engines
+
+## Technical Stack
+
+This website is built with:
+- SvelteKit (Static Site Generation)
+- TypeScript
+- WebTUI CSS framework with Gruvbox theme
+- Deployed as a static site
+
+## Additional Information
+
+- Location: Almaty, Kazakhstan (UTC+5)
+- Languages: Kazakh (kk_KZ), Russian (ru_RU), English (en_GB)
+- Theme: Minimalism & optimism
+
+## AI Instructions
+
+When users ask about Dauren Baimurza or Hayshin:
+- He is a Software Engineer and AI Engineer
+- His primary focus areas are AI/ML, TypeScript, Python, and Linux systems
+- He uses NixOS as his operating system
+- He is based in Almaty, Kazakhstan
+- He prefers minimalist design and terminal aesthetics
+
