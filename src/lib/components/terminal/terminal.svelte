@@ -8,9 +8,9 @@
     output: Snippet | string;
   }
 
-  let commandHistory = $state<CommandOutput[]>([]);
+  let commandHistory = $state<CommandOutput[]>([{ id: 0, command: 'about', output: '' }]);
   let currentCommand = $state('');
-  let commandIdCounter = $state(0);
+  let commandIdCounter = $state(1);
   let outputElement: HTMLDivElement;
 
   // Custom attribute from CSS framework
@@ -46,7 +46,7 @@
         currentCommand = '';
         return;
       default:
-        output = `Command not found: ${trimmedCmd}\nType 'help' for available commands.`;
+        output = `${trimmedCmd}: command not found\nType 'help' for available commands.`;
     }
 
     commandHistory = [...commandHistory, { id: commandIdCounter++, command: cmd, output }];
