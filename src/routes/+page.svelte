@@ -25,9 +25,9 @@
     '@type': 'Person',
     'name': 'Dauren Baimurza',
     'alternateName': 'Hayshin',
-    'jobTitle': 'AI & Software Engineer',
+    'jobTitle': 'Software Engineer',
     'description':
-      'AI & Software Engineer from Almaty, Kazakhstan. Specializing in AI/ML, TypeScript, Python, NixOS and Linux.',
+      'Software Engineer from Almaty, Kazakhstan. Specializing in AI/ML, TypeScript, Python, NixOS and Linux.',
     'url': 'https://hayshin.dev',
     'email': 'hello@hayshin.dev',
     'address': {
@@ -54,8 +54,8 @@
 </script>
 
 <SEO
-  title="Hayshin - AI Engineer & Software Engineer"
-  description="Personal website of Dauren Baimurza (Hayshin) - AI Engineer and Software Engineer from Almaty, Kazakhstan. Specializing in AI/ML, TypeScript, Python and Linux."
+  title="Hayshin - Software Engineer"
+  description="Personal website of Dauren Baimurza (Hayshin) - Software Engineer from Almaty, Kazakhstan. Specializing in AI/ML, TypeScript, Python and Linux."
   keywords="Dauren Baimurza, Hayshin, Hayshinbj, AI Engineer, Software Engineer, Machine Learning, Artificial Intelligence, Developer, Portfolio, TypeScript, Python, Linux, NixOS, Almaty, Kazakhstan"
   ogUrl="https://hayshin.dev"
   canonical="https://hayshin.dev"
@@ -83,7 +83,7 @@
       'Uptime': '20 years, 2 months',
       'Shell': 'Yellow with redness',
       'Theme': 'Minimalism & optimism',
-      'Role': 'AI & Software Engineer',
+      'Role': 'Software Engineer',
       'Languages': 'TypeScript, Python, Java, Rust',
       'Packages': '26 (in-house), 15 (deprecated)',
       'Memory': "2.5 / 13 (friends' birthdays)",
