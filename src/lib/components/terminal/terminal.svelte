@@ -11,6 +11,17 @@
   let commandHistory = $state<CommandOutput[]>([]);
   let currentCommand = $state('');
   let commandIdCounter = $state(0);
+  let outputElement: HTMLDivElement;
+
+  // Custom attribute from CSS framework
+  const terminalBorder = { 'box-': 'round' };
+
+  $effect(() => {
+    // Scroll to bottom whenever command history changes
+    if (outputElement && commandHistory.length > 0) {
+      outputElement.scrollTop = outputElement.scrollHeight;
+    }
+  });
 
   function handleCommand(cmd: string) {
     const trimmedCmd = cmd.trim().toLowerCase();
@@ -53,9 +64,12 @@
 
 <div
   class="terminal"
-  box-="round"
+  {...terminalBorder}
 >
-  <div class="output">
+  <div
+    class="output"
+    bind:this={outputElement}
+  >
     {#each commandHistory as item (item.id)}
       <div class="command-block">
         <div class="command-input">
