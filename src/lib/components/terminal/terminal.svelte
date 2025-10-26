@@ -17,9 +17,12 @@
   const terminalBorder = { 'box-': 'round' };
 
   $effect(() => {
-    // Scroll to bottom whenever command history changes
+    // Scroll to bottom whenever command history changes with smooth animation
     if (outputElement && commandHistory.length > 0) {
-      outputElement.scrollTop = outputElement.scrollHeight;
+      outputElement.scroll({
+        top: outputElement.scrollHeight,
+        behavior: 'smooth',
+      });
     }
   });
 
