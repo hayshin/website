@@ -16,9 +16,9 @@
   }
 
   let {
-    title = 'Hayshin - Software Engineer',
-    description = 'Personal website of Dauren Baimurza (Hayshin) - Software Engineer from Almaty, Kazakhstan. Specializing in TypeScript, Python and Linux.',
-    keywords = 'Dauren Baimurza, Hayshin, Hayshinbj, Software Engineer, Developer, Portfolio, TypeScript, Python, Linux, NixOS, Almaty, Kazakhstan',
+    title = 'Hayshin - AI & Software Engineer',
+    description = 'Personal website of Dauren Baimurza (Hayshin) - AI Engineer and Software Engineer from Almaty, Kazakhstan. Specializing in AI/ML, TypeScript, Python and Linux.',
+    keywords = 'Dauren Baimurza, Hayshin, Hayshinbj, AI Engineer, Software Engineer, Machine Learning, Artificial Intelligence, Developer, Portfolio, TypeScript, Python, Linux, NixOS, Almaty, Kazakhstan',
     author = 'Dauren Baimurza',
     ogType = 'website',
     ogImage = 'https://hayshin.dev/og-image.png',
