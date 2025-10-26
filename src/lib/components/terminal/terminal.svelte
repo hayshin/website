@@ -51,7 +51,10 @@
   <Neofetch />
 {/snippet}
 
-<div class="terminal">
+<div
+  class="terminal"
+  box-="round"
+>
   <div class="output">
     {#each commandHistory as item (item.id)}
       <div class="command-block">
@@ -83,7 +86,7 @@
   .terminal {
     display: flex;
     flex-direction: column;
-    width: 40ch;
+    width: 100ch;
     height: 28lh;
     max-width: 100%;
     overflow: hidden;
@@ -127,8 +130,6 @@
     align-items: center;
     gap: 1ch;
     padding: 1ch;
-    border-top: 1px solid var(--gb-gray);
-    background-color: var(--gb-bg);
   }
 
   .input-container input {
@@ -143,7 +144,7 @@
   }
 
   .input-container input::placeholder {
-    color: var(--gb-gray);
+    color: var(--gb-dark-gray);
   }
 
   /* Responsive design */
@@ -157,14 +158,14 @@
   /* For HD screens (1280-1920px) */
   @media (min-width: 769px) and (max-width: 1920px) {
     .terminal {
-      width: 720px;
+      width: 100ch;
     }
   }
 
   /* For FullHD and larger screens */
   @media (min-width: 1921px) {
     .terminal {
-      width: 920px;
+      width: 120ch;
     }
   }
 </style>
