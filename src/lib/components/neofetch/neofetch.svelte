@@ -4,13 +4,16 @@
     systemInfo: Record<string, string>;
     logo?: string;
     alt?: string;
-    // horizontalPadding?: number; // additional padding between logo and system info
+    links?: {
+      label: string;
+      url: string;
+    }[];
   }
 
   import Logo from '$lib/components/neofetch/logo.svelte';
   import SystemInfo from '$lib/components/neofetch/system-info.svelte';
 
-  let { systemName, systemInfo, logo = '', alt = 'Logo' }: Props = $props();
+  let { systemName, systemInfo, logo = '', alt = 'Logo', links = [] }: Props = $props();
 </script>
 
 <div class="neofetch-container">
@@ -23,6 +26,7 @@
   <SystemInfo
     {systemName}
     {systemInfo}
+    {links}
   />
 </div>
 

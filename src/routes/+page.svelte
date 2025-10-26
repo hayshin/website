@@ -38,9 +38,6 @@
     'Local IP': '77.05.239.54/32',
     'Locale': 'ru_RU, en_GB, kk_KZ (UTF-8)',
     'Email': 'hello@hayshin.dev',
-    'GitHub': 'https://github.com/hayshin',
-    'LinkedIn': 'https://linkedin.com/in/hayshin',
-    'Telegram': 'https://t.me/hayshinbj',
   };
 
   const structuredData = {
@@ -92,6 +89,11 @@
     systemInfo={definitions}
     {logo}
     alt="Logo of left bit shift operator <<"
+    links={[
+      { label: 'GitHub', url: 'https://github.com/hayshin' },
+      { label: 'LinkedIn', url: 'https://linkedin.com/in/hayshin' },
+      { label: 'Telegram', url: 'https://t.me/hayshinbj' },
+    ]}
   />
 </main>
 

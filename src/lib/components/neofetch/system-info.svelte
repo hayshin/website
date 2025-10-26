@@ -2,9 +2,13 @@
   interface Props {
     systemName: string;
     systemInfo: Record<string, string>;
+    links?: {
+      label: string;
+      url: string;
+    }[];
   }
 
-  const { systemName, systemInfo }: Props = $props();
+  const { systemName, systemInfo, links = [] }: Props = $props();
 </script>
 
 <div class="system-info-container">
@@ -17,6 +21,16 @@
         <dd>{description}</dd>
       </div>
     {/each}
+    {#if links.length > 0}
+      <div class="item">
+        <dt>Links:&nbsp;</dt>
+        <dd>
+          {#each links as link}
+            <a href={link.url}>{link.label}</a>&nbsp;
+          {/each}
+        </dd>
+      </div>
+    {/if}
   </dl>
 </div>
 
@@ -45,6 +59,10 @@
 
   .system-info dd {
     margin: 0;
+  }
+
+  .system-info a {
+    color: var(--gb-blue);
   }
 
   @media (max-width: 768px) {
