@@ -19,10 +19,20 @@
   $effect(() => {
     // Scroll to bottom whenever command history changes with smooth animation
     if (outputElement && commandHistory.length > 0) {
-      outputElement.scroll({
-        top: outputElement.scrollHeight,
-        behavior: 'smooth',
-      });
+      // Use smooth scroll on desktop, instant on mobile for better keyboard handling
+      const isMobile = window.innerWidth <= 768;
+
+      if (isMobile) {
+        // Instant scroll on mobile + delay to account for keyboard
+        requestAnimationFrame(() => {
+          outputElement.scrollTop = outputElement.scrollHeight;
+        });
+      } else {
+        outputElement.scroll({
+          top: outputElement.scrollHeight,
+          behavior: 'smooth',
+        });
+      }
     }
   });
 
@@ -59,6 +69,14 @@
       handleCommand(currentCommand);
     }
   }
+
+  function handleFocus(event: FocusEvent) {
+    // Scroll input into view when focused (especially important on mobile)
+    const target = event.target as HTMLElement;
+    setTimeout(() => {
+      target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 300); // Delay to account for keyboard animation
+  }
 </script>
 
 {#snippet neofetchOutput()}
@@ -94,6 +112,7 @@
       type="text"
       bind:value={currentCommand}
       onkeydown={handleKeydown}
+      onfocus={handleFocus}
       placeholder="Type 'help' for available commands"
     />
   </div>
@@ -168,7 +187,13 @@
   @media (max-width: 768px) {
     .terminal {
       width: calc(100vw - 2ch);
-      height: 100vh;
+      height: 100vh; /* Fallback for older browsers */
+      height: 100dvh; /* Dynamic viewport height adjusts for keyboard */
+    }
+
+    .output {
+      /* Ensure scrolling works well on mobile */
+      -webkit-overflow-scrolling: touch;
     }
   }
 
