@@ -86,14 +86,14 @@
 
 <StructuredData data={structuredData} />
 
-<div class="container">
+<main class="container">
   <Neofetch
     systemName="hayshin@bj"
     systemInfo={definitions}
     {logo}
     alt="Logo of left bit shift operator <<"
   />
-</div>
+</main>
 
 <style>
   .container {
