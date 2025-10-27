@@ -54,9 +54,21 @@
 </script>
 
 {#snippet links()}
-  <a href="https://github.com/hayshin">GitHub</a>
-  <a href="https://linkedin.com/in/hayshin">LinkedIn</a>
-  <a href="https://t.me/hayshinbj">Telegram</a>
+  <a
+    href="https://github.com/hayshin"
+    target="_blank"
+    rel="noopener noreferrer">GitHub</a
+  >
+  <a
+    href="https://linkedin.com/in/hayshin"
+    target="_blank"
+    rel="noopener noreferrer">LinkedIn</a
+  >
+  <a
+    href="https://t.me/hayshinbj"
+    target="_blank"
+    rel="noopener noreferrer">Telegram</a
+  >
 {/snippet}
 
 {#snippet email()}
