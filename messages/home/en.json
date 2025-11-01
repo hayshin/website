@@ -2,5 +2,12 @@
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "home_seo_title": "Hayshin - Software Engineer",
   "home_seo_description": "Personal website of Dauren Baimurza (Hayshin) - Software Engineer from Almaty, Kazakhstan. Specializing in AI/ML, TypeScript, Python and Linux.",
-  "home_seo_keywords": "Dauren Baimurza, Hayshin, Hayshinbj, AI Engineer, Software Engineer, Machine Learning, Artificial Intelligence, Developer, Portfolio, TypeScript, Python, Linux, NixOS, Almaty, Kazakhstan"
+  "home_seo_keywords": "Dauren Baimurza, Hayshin, Hayshinbj, AI Engineer, Software Engineer, Programmer, Machine Learning, Artificial Intelligence, Developer, Portfolio, TypeScript, Python, Linux, NixOS, Almaty, Kazakhstan",
+  "home_structured_data_person_name": "Dauren Baimurza",
+  "home_structured_data_person_alternate_name": "Hayshin",
+  "home_structured_data_person_job_title": "Software Engineer",
+  "home_structured_data_person_description": "Software Engineer from Almaty, Kazakhstan. Specializing in AI/ML, TypeScript, Python, NixOS and Linux.",
+  "home_structured_data_person_address_locality": "Almaty",
+  "home_structured_data_person_address_country": "Kazakhstan",
+  "home_structured_data_knows_about": "Artificial Intelligence, Machine Learning, TypeScript, Python, NixOS, Linux, Software Engineering, Web Development"
 }

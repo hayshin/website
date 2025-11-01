@@ -1,8 +1,8 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-  "seo_default_title": "Hayshin - Инженер-программист",
-  "seo_default_description": "Личный сайт Даурена Баймурзы (Hayshin) - инженера-программиста из Алматы, Казахстан. Специализируется на AI/ML, TypeScript, Python и Linux.",
-  "seo_default_keywords": "Даурен Баймурза, Hayshin, Hayshinbj, AI инженер, инженер-программист, машинное обучение, искусственный интеллект, разработчик, портфолио, TypeScript, Python, Linux, NixOS, Алматы, Казахстан",
+  "seo_default_title": "Hayshin - Разработчик",
+  "seo_default_description": "Личный сайт Даурена Баймурза (Hayshin) - разработчика из Алматы, Казахстан. Специализируется на AI/ML, TypeScript, Python и Linux.",
+  "seo_default_keywords": "Даурен Баймурза, Hayshin, Hayshinbj, ИИ инженер, программист, разработчик, машинное обучение, искусственный интеллект, портфолио, TypeScript, Python, Linux, NixOS, Алматы, Казахстан",
   "seo_default_author": "Даурен Баймурза",
   "seo_default_twitter_handle": "@hayshinbj"
 }

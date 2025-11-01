@@ -1,8 +1,8 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-  "seo_default_title": "Hayshin - Бағдарламалық инженер",
-  "seo_default_description": "Даурен Баймұрзаның (Hayshin) жеке сайты - Алматы, Қазақстаннан бағдарламалық инженер. AI/ML, TypeScript, Python және Linux мамандандырылған.",
-  "seo_default_keywords": "Даурен Баймұрза, Hayshin, Hayshinbj, AI инженер, бағдарламалық инженер, машиналық оқыту, жасанды интеллект, әзірлеуші, портфолио, TypeScript, Python, Linux, NixOS, Алматы, Қазақстан",
-  "seo_default_author": "Даурен Баймұрза",
+  "seo_default_title": "Hayshin - Программист",
+  "seo_default_description": "Дәурен Баймурза (Hayshin) жеке сайты - Алматы, Қазақстаннан бағдарламалық инженер. AI/ML, TypeScript, Python және Linux мамандандырылған.",
+  "seo_default_keywords": "Даурен Баймұрза, Hayshin, Hayshinbj, ИИ инженер, бағдарламалық инженер, программист, разработчик, машиналық оқыту, жасанды интеллект, әзірлеуші, портфолио, TypeScript, Python, Linux, NixOS, Алматы, Қазақстан",
+  "seo_default_author": "Дәурен Баймұрза",
   "seo_default_twitter_handle": "@hayshinbj"
 }
