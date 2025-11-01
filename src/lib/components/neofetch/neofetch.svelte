@@ -10,56 +10,7 @@
 
   import Logo from '$lib/components/neofetch/logo.svelte';
   import SystemInfo from '$lib/components/neofetch/system-info.svelte';
-  import { onMount } from 'svelte';
-
-  // Birth time: 2005-07-23 11:00
-  const birthTime = new Date('2005-07-23T11:00:00');
-
-  // Static values calculated once
-  let years = $state(0);
-  let days = $state(0);
-
-  // Dynamic seconds
-  let seconds = $state(0);
-
-  // Calculate years and days once on mount
-  onMount(() => {
-    const now = new Date();
-    const diffMs = now.getTime() - birthTime.getTime();
-
-    // Calculate years (approximate)
-    const msPerYear = 365.25 * 24 * 60 * 60 * 1000;
-    years = Math.floor(diffMs / msPerYear);
-
-    // Calculate remaining time after years
-    const remainingAfterYears = diffMs - years * msPerYear;
-
-    // Calculate days from remaining time
-    const msPerDay = 24 * 60 * 60 * 1000;
-    days = Math.floor(remainingAfterYears / msPerDay);
-  });
-
-  // Update only seconds every second
-  $effect(() => {
-    const updateSeconds = () => {
-      const now = new Date();
-      const diffMs = now.getTime() - birthTime.getTime();
-
-      // Calculate years and remaining for current second calculation
-      const msPerYear = 365.25 * 24 * 60 * 60 * 1000;
-      const currentYears = Math.floor(diffMs / msPerYear);
-      const remainingAfterYears = diffMs - currentYears * msPerYear;
-
-      // Calculate seconds within the current day
-      const msPerDay = 24 * 60 * 60 * 1000;
-      seconds = Math.floor((remainingAfterYears % msPerDay) / 1000);
-    };
-
-    updateSeconds();
-    const interval = setInterval(updateSeconds, 1000);
-
-    return () => clearInterval(interval);
-  });
+  import Uptime from '$lib/components/neofetch/uptime.svelte';
 
   let {
     systemName = 'hayshin@bj',
@@ -127,7 +78,7 @@
 {/snippet}
 
 {#snippet uptimeSnippet()}
-  {years} years, {days} days, {seconds} secs
+  <Uptime />
 {/snippet}
 
 <div class="neofetch-container">
