@@ -7,8 +7,8 @@
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    'name': m.home_structured_data_person_name(),
-    'alternateName': m.home_structured_data_person_alternate_name(),
+    'name': m.common_person_name(),
+    'alternateName': m.common_person_alternate_name(),
     'jobTitle': m.home_structured_data_person_job_title(),
     'description': m.home_structured_data_person_description(),
     'url': 'https://hayshin.dev',

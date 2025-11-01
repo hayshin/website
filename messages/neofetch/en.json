@@ -1,6 +1,5 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-  "neofetch_system_name": "hayshin@bj",
   "neofetch_logo_alt": "Logo of left bit shift operator <<",
 
   "neofetch_field_os": "OS",
@@ -23,7 +22,6 @@
   "neofetch_field_links": "Links",
 
   "neofetch_value_os": "Asian 25.11 (Kazakh) x86_64",
-  "neofetch_value_host": "Dauren Baimurza",
   "neofetch_value_kernel": "Homo Erectus v1.3.37",
   "neofetch_value_shell": "Yellow with redness",
   "neofetch_value_theme": "Minimalism & optimism",

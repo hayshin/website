@@ -9,8 +9,7 @@
       "./messages/common/{locale}.json",
       "./messages/seo/{locale}.json",
       "./messages/neofetch/{locale}.json",
-      "./messages/home/{locale}.json",
-      "./messages/structured_data/{locale}.json"
+      "./messages/home/{locale}.json"
     ]
   },
   "baseLocale": "en",

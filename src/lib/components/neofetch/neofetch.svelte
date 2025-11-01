@@ -6,7 +6,7 @@
   import Uptime from '$lib/components/neofetch/uptime.svelte';
   import LanguageSwitcher from '$lib/components/neofetch/language-switcher.svelte';
 
-  const systemName = m.neofetch_system_name();
+  const systemName = m.common_system_name();
   const logo = `
             █████           █████
           ██████          ██████
@@ -27,7 +27,7 @@
 
   let systemInfo = {
     [m.neofetch_field_os()]: m.neofetch_value_os(),
-    [m.neofetch_field_host()]: m.neofetch_value_host(),
+    [m.neofetch_field_host()]: m.common_person_name(),
     [m.neofetch_field_kernel()]: m.neofetch_value_kernel(),
     [m.neofetch_field_uptime()]: uptimeSnippet,
     [m.neofetch_field_shell()]: m.neofetch_value_shell(),

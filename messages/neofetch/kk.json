@@ -1,6 +1,5 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-  "neofetch_system_name": "hayshin@bj",
   "neofetch_logo_alt": "Сол жаққа биттік жылжыту операторының логотипі <<",
 
   "neofetch_field_os": "ОЖ",
@@ -23,7 +22,6 @@
   "neofetch_field_links": "Сілтемелер",
 
   "neofetch_value_os": "Азиат 25.11 (Қазақ) x86_64",
-  "neofetch_value_host": "Даурен Баймұрза",
   "neofetch_value_kernel": "Һомо Еректус v1.3.37",
   "neofetch_value_shell": "Сарғылт қызылдауымен",
   "neofetch_value_theme": "Минимализм мен оптимизм",

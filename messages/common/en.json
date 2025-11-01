@@ -1,5 +1,8 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "common_email": "hello@hayshin.dev",
-  "common_site_name": "Hayshin Website"
+  "common_site_name": "Hayshin Website",
+  "common_person_name": "Dauren Baimurza",
+  "common_person_alternate_name": "Hayshin",
+  "common_system_name": "hayshin@bj"
 }
