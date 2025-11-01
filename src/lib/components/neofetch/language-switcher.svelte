@@ -22,7 +22,5 @@
     aria-label="Switch to {locale}"
   >
     {localeLabels[locale] || locale}
-  </a>
-  {#if locale !== locales[locales.length - 1]},
-  {/if}
+  </a>{#if locale !== locales[locales.length - 1]},&nbsp;{/if}
 {/each}
