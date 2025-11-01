@@ -12,11 +12,16 @@
 
 /* Theme */
 @import '@webtui/theme-gruvbox';
+@import '@webtui/theme-everforest';
+
+/* Plugins */
+@import '@webtui/plugin-nf';
 
 /* Base theme customization */
 @layer base {
   :root {
     --font-size: 18px;
+    --font-family: 'JetBrainsMono', monospace, 'Symbols Nerd Font';
   }
 
   /* Decrease font size on mobile devices */
