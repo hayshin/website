@@ -1,77 +1,40 @@
 import { persisted } from 'svelte-persisted-store';
 import { browser } from '$app/environment';
-import { get } from 'svelte/store';
+import { derived } from 'svelte/store';
 
 // Available Gruvbox theme variants
-export const themes = [
-  'gruvbox-dark-hard',
-  'gruvbox-dark-medium',
-  'gruvbox-dark-soft',
-  'gruvbox-light-hard',
-  'gruvbox-light-medium',
-  'gruvbox-light-soft',
-] as const;
+export const DARK_THEME = 'gruvbox-dark-medium' as const;
+export const LIGHT_THEME = 'gruvbox-light-medium' as const;
+
+export const themes = [DARK_THEME, LIGHT_THEME] as const;
 
 export type Theme = (typeof themes)[number];
 
-const DEFAULT_THEME: Theme = 'gruvbox-dark-medium';
+const DEFAULT_THEME: Theme = DARK_THEME;
 
-// Create persisted store with tab syncing
-const themePersistedStore = persisted<Theme>('webtui-theme', DEFAULT_THEME, {
+// Create persisted store with tab syncing - this is the main store
+export const theme = persisted<Theme>('webtui-theme', DEFAULT_THEME, {
   syncTabs: true,
 });
 
-// Apply theme to DOM
-function applyTheme(theme: Theme) {
+// Apply theme to DOM whenever it changes
+theme.subscribe(value => {
   if (!browser) return;
 
-  document.documentElement.setAttribute('data-webtui-theme', theme);
+  document.documentElement.setAttribute('data-webtui-theme', value);
 
   // Update theme-color meta tag based on theme
   const themeColorMeta = document.querySelector('meta[name="theme-color"]');
   if (themeColorMeta) {
-    const isDark = theme.includes('dark');
+    const isDark = value.includes('dark');
     themeColorMeta.setAttribute('content', isDark ? '#282828' : '#fbf1c7');
   }
+});
+
+// Utility function to toggle between dark and light
+export function toggleTheme() {
+  theme.update(current => (current === DARK_THEME ? LIGHT_THEME : DARK_THEME));
 }
 
-// Subscribe to theme changes and apply them
-themePersistedStore.subscribe(applyTheme);
-
-// Enhanced theme store with additional methods
-class ThemeStore {
-  get current(): Theme {
-    return get(themePersistedStore);
-  }
-
-  set(theme: Theme) {
-    themePersistedStore.set(theme);
-  }
-
-  update(fn: (theme: Theme) => Theme) {
-    themePersistedStore.update(fn);
-  }
-
-  subscribe(fn: (theme: Theme) => void) {
-    return themePersistedStore.subscribe(fn);
-  }
-
-  reset() {
-    themePersistedStore.reset();
-  }
-
-  toggle() {
-    this.update(current => {
-      const currentIndex = themes.indexOf(current);
-      const nextIndex = (currentIndex + 1) % themes.length;
-      return themes[nextIndex];
-    });
-  }
-
-  isDark(theme?: Theme): boolean {
-    const currentTheme = theme ?? this.current;
-    return currentTheme.includes('dark');
-  }
-}
-
-export const themeStore = new ThemeStore();
+// Derived store to check if current theme is dark
+export const isDarkTheme = derived(theme, $theme => $theme.includes('dark'));

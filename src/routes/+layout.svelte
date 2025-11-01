@@ -1,10 +1,12 @@
 <script lang="ts">
   import { browser } from '$app/environment';
   import favicon from '$lib/assets/favicon.svg';
-  import { themeStore } from '$lib/stores/theme.svelte';
+  import { theme } from '$lib/stores/theme.svelte';
   import '../app.css';
 
   let { children } = $props();
+
+  // Initialize theme (the import itself triggers the subscription)
 
   $effect(() => {
     if (!browser) return;
