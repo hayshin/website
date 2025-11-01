@@ -1,4 +1,6 @@
 <script lang="ts">
+  import * as m from '$lib/paraglide/messages';
+
   const birthTime = new Date('2005-07-23T11:00:00');
   const msPerYear = 365.25 * 24 * 60 * 60 * 1000;
   const msPerDay = 24 * 60 * 60 * 1000;
@@ -31,4 +33,4 @@
   });
 </script>
 
-{years} years, {days} days, {seconds} secs
+{m.neofetch_uptime_full({ years, days, seconds })}

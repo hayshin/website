@@ -2,21 +2,21 @@
   import Terminal from '$lib/components/terminal/terminal.svelte';
   import SEO from '$lib/components/seo/seo.svelte';
   import StructuredData from '$lib/components/seo/structured-data.svelte';
+  import * as m from '$lib/paraglide/messages';
 
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    'name': 'Dauren Baimurza',
-    'alternateName': 'Hayshin',
-    'jobTitle': 'Software Engineer',
-    'description':
-      'Software Engineer from Almaty, Kazakhstan. Specializing in AI/ML, TypeScript, Python, NixOS and Linux.',
+    'name': m.structured_data_person_name(),
+    'alternateName': m.structured_data_person_alternate_name(),
+    'jobTitle': m.structured_data_person_job_title(),
+    'description': m.structured_data_person_description(),
     'url': 'https://hayshin.dev',
-    'email': 'hello@hayshin.dev',
+    'email': m.common_email(),
     'address': {
       '@type': 'PostalAddress',
-      'addressLocality': 'Almaty',
-      'addressCountry': 'Kazakhstan',
+      'addressLocality': m.structured_data_person_address_locality(),
+      'addressCountry': m.structured_data_person_address_country(),
     },
     'sameAs': [
       'https://github.com/hayshin',
@@ -24,22 +24,22 @@
       'https://t.me/hayshinbj',
     ],
     'knowsAbout': [
-      'Artificial Intelligence',
-      'Machine Learning',
-      'TypeScript',
-      'Python',
-      'NixOS',
-      'Linux',
-      'Software Engineering',
-      'Web Development',
+      m.structured_data_skills_ai(),
+      m.structured_data_skills_ml(),
+      m.structured_data_skills_typescript(),
+      m.structured_data_skills_python(),
+      m.structured_data_skills_nixos(),
+      m.structured_data_skills_linux(),
+      m.structured_data_skills_software_engineering(),
+      m.structured_data_skills_web_development(),
     ],
   };
 </script>
 
 <SEO
-  title="Hayshin - Software Engineer"
-  description="Personal website of Dauren Baimurza (Hayshin) - Software Engineer from Almaty, Kazakhstan. Specializing in AI/ML, TypeScript, Python and Linux."
-  keywords="Dauren Baimurza, Hayshin, Hayshinbj, AI Engineer, Software Engineer, Machine Learning, Artificial Intelligence, Developer, Portfolio, TypeScript, Python, Linux, NixOS, Almaty, Kazakhstan"
+  title={m.home_seo_title()}
+  description={m.home_seo_description()}
+  keywords={m.home_seo_keywords()}
   ogUrl="https://hayshin.dev"
   canonical="https://hayshin.dev"
 />

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "structured_data_person_name": "Dauren Baimurza",
+  "structured_data_person_alternate_name": "Hayshin",
+  "structured_data_person_job_title": "Software Engineer",
+  "structured_data_person_description": "Software Engineer from Almaty, Kazakhstan. Specializing in AI/ML, TypeScript, Python, NixOS and Linux.",
+  "structured_data_person_address_locality": "Almaty",
+  "structured_data_person_address_country": "Kazakhstan",
+
+  "structured_data_skills_ai": "Artificial Intelligence",
+  "structured_data_skills_ml": "Machine Learning",
+  "structured_data_skills_typescript": "TypeScript",
+  "structured_data_skills_python": "Python",
+  "structured_data_skills_nixos": "NixOS",
+  "structured_data_skills_linux": "Linux",
+  "structured_data_skills_software_engineering": "Software Engineering",
+  "structured_data_skills_web_development": "Web Development"
+}

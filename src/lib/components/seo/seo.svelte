@@ -1,4 +1,6 @@
 <script lang="ts">
+  import * as m from '$lib/paraglide/messages';
+
   interface Props {
     title?: string;
     description?: string;
@@ -16,16 +18,16 @@
   }
 
   let {
-    title = 'Hayshin - Software Engineer',
-    description = 'Personal website of Dauren Baimurza (Hayshin) - Software Engineer from Almaty, Kazakhstan. Specializing in AI/ML, TypeScript, Python and Linux.',
-    keywords = 'Dauren Baimurza, Hayshin, Hayshinbj, AI Engineer, Software Engineer, Machine Learning, Artificial Intelligence, Developer, Portfolio, TypeScript, Python, Linux, NixOS, Almaty, Kazakhstan',
-    author = 'Dauren Baimurza',
+    title = m.seo_default_title(),
+    description = m.seo_default_description(),
+    keywords = m.seo_default_keywords(),
+    author = m.seo_default_author(),
     ogType = 'website',
     ogImage = 'https://hayshin.dev/og-image.png',
     ogUrl = 'https://hayshin.dev',
     twitterCard = 'summary_large_image',
-    twitterSite = '@hayshinbj',
-    twitterCreator = '@hayshinbj',
+    twitterSite = m.seo_default_twitter_handle(),
+    twitterCreator = m.seo_default_twitter_handle(),
     canonical = undefined,
     noindex = false,
     nofollow = false,
@@ -102,7 +104,7 @@
   />
   <meta
     property="og:site_name"
-    content="Hayshin Website"
+    content={m.common_site_name()}
   />
 
   <!-- Twitter -->

@@ -1,9 +1,10 @@
 <script lang="ts">
   import type { Snippet } from 'svelte';
+  import * as m from '$lib/paraglide/messages';
 
   interface Props {
     systemName?: string;
-    systemInfo?: Record<string, string | Snippet>;
+    systemInfoProp?: Record<string, string | Snippet>;
     logo?: string;
     alt?: string;
   }
@@ -11,29 +12,11 @@
   import Logo from '$lib/components/neofetch/logo.svelte';
   import SystemInfo from '$lib/components/neofetch/system-info.svelte';
   import Uptime from '$lib/components/neofetch/uptime.svelte';
+  import LanguageSwitcher from '$lib/components/neofetch/language-switcher.svelte';
 
   let {
-    systemName = 'hayshin@bj',
-    systemInfo = {
-      'OS': 'Asian 25.11 (Kazakh) x86_64',
-      'Host': 'Dauren Baimurza',
-      'Kernel': 'Homo Erectus v1.3.37',
-      'Uptime': uptimeSnippet,
-      'Shell': 'Yellow with redness',
-      'Theme': 'Minimalism & optimism',
-      'Role': 'Software Engineer',
-      'Languages': 'TypeScript, Python, Java, Rust',
-      'Packages': '26 (in-house), 15 (deprecated)',
-      'Memory': "2.5 / 13 (friends' birthdays)",
-      'CPU': '2-Core@89 IQ',
-      'GPU': 'Right Eye -3.5D; Left Eye -2.75D',
-      'Disk (/)': '51.44 KiG / 76 KiG (39.8%)',
-      'Location': 'Almaty, Kazakhstan (UTC+5)',
-      'Local IP': '77.05.239.54/32',
-      'Locale': 'ru_RU, en_GB, kk_KZ (UTF-8)',
-      'Email': email,
-      'Links': links,
-    },
+    systemName = m.neofetch_system_name(),
+    systemInfoProp,
     logo = `
             █████           █████
           ██████          ██████
@@ -50,8 +33,30 @@
           ██████          ██████
             █████           █████
 `,
-    alt = 'Logo of left bit shift operator <<',
+    alt = m.neofetch_logo_alt(),
   }: Props = $props();
+  let systemInfo = $derived(
+    systemInfoProp ?? {
+      [m.neofetch_field_os()]: m.neofetch_value_os(),
+      [m.neofetch_field_host()]: m.neofetch_value_host(),
+      [m.neofetch_field_kernel()]: m.neofetch_value_kernel(),
+      [m.neofetch_field_uptime()]: uptimeSnippet,
+      [m.neofetch_field_shell()]: m.neofetch_value_shell(),
+      [m.neofetch_field_theme()]: m.neofetch_value_theme(),
+      [m.neofetch_field_role()]: m.neofetch_value_role(),
+      [m.neofetch_field_languages()]: m.neofetch_value_languages(),
+      [m.neofetch_field_packages()]: m.neofetch_value_packages(),
+      [m.neofetch_field_memory()]: m.neofetch_value_memory(),
+      [m.neofetch_field_cpu()]: m.neofetch_value_cpu(),
+      [m.neofetch_field_gpu()]: m.neofetch_value_gpu(),
+      [m.neofetch_field_disk()]: m.neofetch_value_disk(),
+      [m.neofetch_field_location()]: m.neofetch_value_location(),
+      [m.neofetch_field_local_ip()]: m.neofetch_value_local_ip(),
+      [m.neofetch_field_locale()]: localeSnippet,
+      [m.neofetch_field_email()]: email,
+      [m.neofetch_field_links()]: links,
+    },
+  );
   logo = logo.replace(/^\n+|\n+$/g, ''); // Remove leading and trailing newlines
 </script>
 
@@ -59,26 +64,30 @@
   <a
     href="https://github.com/hayshin"
     target="_blank"
-    rel="noopener noreferrer">GitHub</a
+    rel="noopener noreferrer">{m.neofetch_links_github()}</a
   >
   <a
     href="https://linkedin.com/in/hayshin"
     target="_blank"
-    rel="noopener noreferrer">LinkedIn</a
+    rel="noopener noreferrer">{m.neofetch_links_linkedin()}</a
   >
   <a
     href="https://t.me/hayshinbj"
     target="_blank"
-    rel="noopener noreferrer">Telegram</a
+    rel="noopener noreferrer">{m.neofetch_links_telegram()}</a
   >
 {/snippet}
 
 {#snippet email()}
-  <a href="mailto:hello@hayshin.dev">hello@hayshin.dev</a>
+  <a href="mailto:{m.common_email()}">{m.common_email()}</a>
 {/snippet}
 
 {#snippet uptimeSnippet()}
   <Uptime />
+{/snippet}
+
+{#snippet localeSnippet()}
+  <LanguageSwitcher />
 {/snippet}
 
 <div class="neofetch-container">
