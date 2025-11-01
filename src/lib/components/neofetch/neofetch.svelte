@@ -49,16 +49,19 @@
 
 {#snippet links()}
   <a
+    class="external-link"
     href="https://github.com/hayshin"
     target="_blank"
     rel="noopener noreferrer">Github</a
   >
   <a
+    class="external-link"
     href="https://linkedin.com/in/hayshin"
     target="_blank"
     rel="noopener noreferrer">LinkedIn</a
   >
   <a
+    class="external-link"
     href="https://t.me/hayshinbj"
     target="_blank"
     rel="noopener noreferrer">Telegram</a
@@ -66,7 +69,10 @@
 {/snippet}
 
 {#snippet email()}
-  <a href="mailto:{m.common_email()}">{m.common_email()}</a>
+  <a
+    class="email-link"
+    href="mailto:{m.common_email()}">{m.common_email()}</a
+  >
 {/snippet}
 
 {#snippet uptimeSnippet()}

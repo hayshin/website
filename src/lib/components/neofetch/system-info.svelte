@@ -57,7 +57,14 @@
     user-select: text;
   }
 
-  .system-info dd :global(a) {
+  .system-info dd :global(a.external-link) {
     color: var(--gb-blue);
+    text-decoration: underline;
+  }
+
+  .system-info dd :global(a.email-link),
+  .system-info dd :global(a.locale-link) {
+    color: inherit;
+    text-decoration: underline;
   }
 </style>

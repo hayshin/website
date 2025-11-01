@@ -14,6 +14,7 @@
 
 {#each locales as locale (locale)}
   <a
+    class="locale-link"
     href="#"
     onclick={e => {
       e.preventDefault();
