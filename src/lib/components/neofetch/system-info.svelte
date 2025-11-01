@@ -33,6 +33,11 @@
     color: var(--gb-blue);
   }
 
+  .system-info .item {
+    display: block;
+    user-select: text;
+  }
+
   .system-info dt {
     margin: 0;
     display: inline-block;
@@ -41,27 +46,15 @@
     line-height: var(--line-height);
     font-weight: var(--font-weight-bold);
     color: var(--gb-green);
-  }
-
-  .system-info .item {
-    display: inline;
-  }
-
-  .system-info dt {
-    font-weight: bold;
-    display: inline;
+    user-select: text;
   }
 
   .system-info dd {
     margin: 0;
-    display: inline;
+    display: inline-block;
     word-wrap: break-word;
     overflow-wrap: break-word;
-  }
-
-  .system-info .item::after {
-    content: '';
-    display: block;
+    user-select: text;
   }
 
   .system-info dd :global(a) {
