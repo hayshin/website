@@ -3,6 +3,7 @@
     themeConfig,
     currentFamilyName,
     isLightMode,
+    supportsMode,
     toggleMode,
     cycleFamily,
   } from '$lib/stores/theme.svelte';
@@ -25,6 +26,7 @@
     type="checkbox"
     {...{ 'is-': 'switch' }}
     checked={$isLightMode}
+    disabled={!$supportsMode}
     onchange={handleToggle}
   />
   <span id="sun">&nbsp;</span>

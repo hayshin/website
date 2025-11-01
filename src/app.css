@@ -10,12 +10,15 @@
 @import '@webtui/css/components/typography.css';
 @import '@webtui/css/components/switch.css';
 
+/* Plugins */
+@import '@webtui/plugin-nf';
+
 /* Theme */
 @import '@webtui/theme-gruvbox';
 @import '@webtui/theme-everforest';
-
-/* Plugins */
-@import '@webtui/plugin-nf';
+@import '@webtui/theme-vitesse';
+@import '@webtui/theme-nord';
+@import '@webtui/theme-catppuccin';
 
 /* Base theme customization */
 @layer base {
