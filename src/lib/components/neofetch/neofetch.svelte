@@ -51,17 +51,17 @@
   <a
     href="https://github.com/hayshin"
     target="_blank"
-    rel="noopener noreferrer">{m.neofetch_links_github()}</a
+    rel="noopener noreferrer">Github</a
   >
   <a
     href="https://linkedin.com/in/hayshin"
     target="_blank"
-    rel="noopener noreferrer">{m.neofetch_links_linkedin()}</a
+    rel="noopener noreferrer">LinkedIn</a
   >
   <a
     href="https://t.me/hayshinbj"
     target="_blank"
-    rel="noopener noreferrer">{m.neofetch_links_telegram()}</a
+    rel="noopener noreferrer">Telegram</a
   >
 {/snippet}
 

@@ -19,7 +19,7 @@
   "neofetch_field_location": "Орын",
   "neofetch_field_local_ip": "Жергілікті IP",
   "neofetch_field_locale": "Локаль",
-  "neofetch_field_email": "Email",
+  "neofetch_field_email": "Пошта",
   "neofetch_field_links": "Сілтемелер",
 
   "neofetch_value_os": "Азиат 25.11 (Қазақ) x86_64",
@@ -37,13 +37,5 @@
   "neofetch_value_location": "Алматы, Қазақстан (UTC+5)",
   "neofetch_value_local_ip": "77.05.239.54/32",
   "neofetch_value_locale": "ru_RU, en_GB, kk_KZ (UTF-8)",
-
-  "neofetch_uptime_years": "{years} жыл",
-  "neofetch_uptime_days": "{days} күн",
-  "neofetch_uptime_secs": "{seconds} сек",
-  "neofetch_uptime_full": "{years} жыл, {days} күн, {seconds} сек",
-
-  "neofetch_links_github": "GitHub",
-  "neofetch_links_linkedin": "LinkedIn",
-  "neofetch_links_telegram": "Telegram"
+  "neofetch_uptime_full": "{years} жыл, {days} күн, {seconds} сек"
 }

@@ -36,13 +36,5 @@
   "neofetch_value_disk": "51.44 KiG / 76 KiG (39.8%)",
   "neofetch_value_location": "Almaty, Kazakhstan (UTC+5)",
   "neofetch_value_local_ip": "77.05.239.54/32",
-
-  "neofetch_uptime_years": "{years} years",
-  "neofetch_uptime_days": "{days} days",
-  "neofetch_uptime_secs": "{seconds} secs",
-  "neofetch_uptime_full": "{years} years, {days} days, {seconds} secs",
-
-  "neofetch_links_github": "GitHub",
-  "neofetch_links_linkedin": "LinkedIn",
-  "neofetch_links_telegram": "Telegram"
+  "neofetch_uptime_full": "{years} years, {days} days, {seconds} secs"
 }

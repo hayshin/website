@@ -19,7 +19,7 @@
   "neofetch_field_location": "Локация",
   "neofetch_field_local_ip": "Локальный IP",
   "neofetch_field_locale": "Локаль",
-  "neofetch_field_email": "Email",
+  "neofetch_field_email": "Почта",
   "neofetch_field_links": "Ссылки",
 
   "neofetch_value_os": "Азиат 25.11 (Казах) x86_64",
@@ -27,7 +27,7 @@
   "neofetch_value_kernel": "Homo Erectus v1.3.37",
   "neofetch_value_shell": "Желтый с покраснением",
   "neofetch_value_theme": "Минимализм и оптимизм",
-  "neofetch_value_role": "Инженер-программист",
+  "neofetch_value_role": "Разработчик",
   "neofetch_value_languages": "TypeScript, Python, Java, Rust",
   "neofetch_value_packages": "26 (внутренних), 15 (устаревших)",
   "neofetch_value_memory": "2.5 / 13 (дни рождения друзей)",
@@ -37,13 +37,5 @@
   "neofetch_value_location": "Алматы, Казахстан (UTC+5)",
   "neofetch_value_local_ip": "77.05.239.54/32",
   "neofetch_value_locale": "ru_RU, en_GB, kk_KZ (UTF-8)",
-
-  "neofetch_uptime_years": "{years} лет",
-  "neofetch_uptime_days": "{days} дней",
-  "neofetch_uptime_secs": "{seconds} сек",
-  "neofetch_uptime_full": "{years} лет, {days} дней, {seconds} сек",
-
-  "neofetch_links_github": "GitHub",
-  "neofetch_links_linkedin": "LinkedIn",
-  "neofetch_links_telegram": "Telegram"
+  "neofetch_uptime_full": "{years} лет, {days} дней, {seconds} сек"
 }
