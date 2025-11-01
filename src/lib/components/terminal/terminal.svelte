@@ -180,12 +180,15 @@
     .terminal {
       width: calc(100vw - 2ch);
       height: 100vh; /* Fallback for older browsers */
-      height: 100dvh; /* Dynamic viewport height adjusts for keyboard */
+      height: 100svh; /* Small viewport height accounts for browser UI */
+      max-height: calc(100svh - 2ch); /* Ensure some spacing from edges */
+      margin-block: 1ch; /* Add vertical margin for mobile */
     }
 
     .output {
       /* Ensure scrolling works well on mobile */
       -webkit-overflow-scrolling: touch;
+      padding-bottom: calc(1ch + env(safe-area-inset-bottom)); /* Extra padding for safe areas */
     }
   }
 
