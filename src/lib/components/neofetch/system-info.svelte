@@ -15,7 +15,7 @@
   <dl class="system-info">
     {#each Object.entries(systemInfo) as [term, description] (term)}
       <div class="item">
-        <dt>{term}:</dt>
+        <dt><h2>{term}:</h2></dt>
         <dd>
           {#if typeof description === 'function'}
             {@render description()}
@@ -30,7 +30,7 @@
 
 <style>
   .system-name {
-    color: var(--gb-blue);
+    color: var(--gb-blue, var(--aqua, var(--blue, var(--nord7))));
   }
 
   .system-info .item {
@@ -41,12 +41,6 @@
   .system-info dt {
     margin: 0;
     display: inline-block;
-    font-family: var(--font-family);
-    font-size: var(--font-size);
-    line-height: var(--line-height);
-    font-weight: var(--font-weight-bold);
-    color: var(--gb-green, var(--green, var(--nord14)));
-    user-select: text;
   }
 
   .system-info dd {

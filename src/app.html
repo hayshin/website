@@ -10,6 +10,34 @@
       name="theme-color"
       content="#282828"
     />
+    <script>
+      // Apply theme immediately to prevent flash of unstyled content
+      (function () {
+        try {
+          const stored = localStorage.getItem('webtui-theme-config');
+          if (stored) {
+            const config = JSON.parse(stored);
+            let theme = 'gruvbox-dark-medium'; // default
+
+            if (config.family === 'nord') {
+              theme = 'nord';
+            } else if (config.family === 'catppuccin') {
+              theme = config.mode === 'dark' ? 'catppuccin-mocha' : 'catppuccin-latte';
+            } else if (config.family === 'vitesse') {
+              theme = `vitesse-${config.mode}-soft`;
+            } else {
+              theme = `${config.family}-${config.mode}-medium`;
+            }
+
+            document.documentElement.setAttribute('data-webtui-theme', theme);
+          } else {
+            document.documentElement.setAttribute('data-webtui-theme', 'gruvbox-dark-medium');
+          }
+        } catch (e) {
+          document.documentElement.setAttribute('data-webtui-theme', 'gruvbox-dark-medium');
+        }
+      })();
+    </script>
     %sveltekit.head%
   </head>
   <body data-sveltekit-preload-data="hover">

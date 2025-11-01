@@ -13,15 +13,31 @@
 </script>
 
 {#each locales as locale (locale)}
-  <a
+  <button
     class="locale-link"
-    href="#"
-    onclick={e => {
-      e.preventDefault();
-      switchLocale(locale);
-    }}
+    type="button"
+    onclick={() => switchLocale(locale)}
     aria-label="Switch to {locale}"
   >
     {localeLabels[locale] || locale}
-  </a>{#if locale !== locales[locales.length - 1]},&nbsp;{/if}
+  </button>{#if locale !== locales[locales.length - 1]},&nbsp;{/if}
 {/each}
+
+<style>
+  .locale-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    text-decoration: underline;
+    font-weight: normal;
+    cursor: pointer;
+    height: 1lh;
+  }
+
+  .locale-link:hover {
+    opacity: 0.8;
+  }
+</style>
