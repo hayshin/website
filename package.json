@@ -55,6 +55,7 @@
     "@webtui/css": "^0.1.5",
     "@webtui/theme-gruvbox": "^0.0.1",
     "better-sqlite3": "^12.4.1",
-    "husky": "^9.1.7"
+    "husky": "^9.1.7",
+    "svelte-persisted-store": "^0.12.0"
   }
 }

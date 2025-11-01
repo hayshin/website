@@ -21,3 +21,11 @@
     onchange={handleToggle}
   />
 </label>
+
+<style>
+  input[type='checkbox'][is-='switch'] {
+    /* ... */
+    font-size: calc(var(--font-size) - 4px);
+    align-self: center;
+  }
+</style>
