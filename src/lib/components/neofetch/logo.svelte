@@ -8,9 +8,7 @@
 </script>
 
 <figure aria-label={alt}>
-  <pre aria-hidden="true">
-            {logo}
-    </pre>
+  <pre aria-hidden="true">{logo}</pre>
 </figure>
 
 <style>

@@ -51,6 +51,7 @@
 `,
     alt = 'Logo of left bit shift operator <<',
   }: Props = $props();
+  logo = logo.replace(/^\n+|\n+$/g, ''); // Remove leading and trailing newlines
 </script>
 
 {#snippet links()}
