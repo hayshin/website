@@ -10,6 +10,56 @@
 
   import Logo from '$lib/components/neofetch/logo.svelte';
   import SystemInfo from '$lib/components/neofetch/system-info.svelte';
+  import { onMount } from 'svelte';
+
+  // Birth time: 2005-07-23 11:00
+  const birthTime = new Date('2005-07-23T11:00:00');
+
+  // Static values calculated once
+  let years = $state(0);
+  let days = $state(0);
+
+  // Dynamic seconds
+  let seconds = $state(0);
+
+  // Calculate years and days once on mount
+  onMount(() => {
+    const now = new Date();
+    const diffMs = now.getTime() - birthTime.getTime();
+
+    // Calculate years (approximate)
+    const msPerYear = 365.25 * 24 * 60 * 60 * 1000;
+    years = Math.floor(diffMs / msPerYear);
+
+    // Calculate remaining time after years
+    const remainingAfterYears = diffMs - years * msPerYear;
+
+    // Calculate days from remaining time
+    const msPerDay = 24 * 60 * 60 * 1000;
+    days = Math.floor(remainingAfterYears / msPerDay);
+  });
+
+  // Update only seconds every second
+  $effect(() => {
+    const updateSeconds = () => {
+      const now = new Date();
+      const diffMs = now.getTime() - birthTime.getTime();
+
+      // Calculate years and remaining for current second calculation
+      const msPerYear = 365.25 * 24 * 60 * 60 * 1000;
+      const currentYears = Math.floor(diffMs / msPerYear);
+      const remainingAfterYears = diffMs - currentYears * msPerYear;
+
+      // Calculate seconds within the current day
+      const msPerDay = 24 * 60 * 60 * 1000;
+      seconds = Math.floor((remainingAfterYears % msPerDay) / 1000);
+    };
+
+    updateSeconds();
+    const interval = setInterval(updateSeconds, 1000);
+
+    return () => clearInterval(interval);
+  });
 
   let {
     systemName = 'hayshin@bj',
@@ -17,7 +67,7 @@
       'OS': 'Asian 25.11 (Kazakh) x86_64',
       'Host': 'Dauren Baimurza',
       'Kernel': 'Homo Erectus v1.3.37',
-      'Uptime': '20 years, 2 months',
+      'Uptime': uptimeSnippet,
       'Shell': 'Yellow with redness',
       'Theme': 'Minimalism & optimism',
       'Role': 'Software Engineer',
@@ -74,6 +124,10 @@
 
 {#snippet email()}
   <a href="mailto:hello@hayshin.dev">hello@hayshin.dev</a>
+{/snippet}
+
+{#snippet uptimeSnippet()}
+  {years} years, {days} days, {seconds} secs
 {/snippet}
 
 <div class="neofetch-container">
