@@ -5,6 +5,7 @@
   import SystemInfo from '$lib/components/neofetch/system-info.svelte';
   import Uptime from '$lib/components/neofetch/uptime.svelte';
   import LanguageSwitcher from '$lib/components/neofetch/language-switcher.svelte';
+  import ThemeSwitcher from '$lib/components/neofetch/theme-switcher.svelte';
 
   const systemName = m.common_system_name();
   const logo = `
@@ -31,7 +32,7 @@
     [m.neofetch_field_kernel()]: m.neofetch_value_kernel(),
     [m.neofetch_field_uptime()]: uptimeSnippet,
     [m.neofetch_field_shell()]: m.neofetch_value_shell(),
-    [m.neofetch_field_theme()]: m.neofetch_value_theme(),
+    [m.neofetch_field_theme()]: themeSnippet,
     [m.neofetch_field_role()]: m.neofetch_value_role(),
     [m.neofetch_field_languages()]: m.neofetch_value_languages(),
     [m.neofetch_field_packages()]: m.neofetch_value_packages(),
@@ -81,6 +82,10 @@
 
 {#snippet localeSnippet()}
   <LanguageSwitcher />
+{/snippet}
+
+{#snippet themeSnippet()}
+  <ThemeSwitcher />
 {/snippet}
 
 <div class="neofetch-container">

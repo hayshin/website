@@ -1,6 +1,7 @@
 <script lang="ts">
   import { browser } from '$app/environment';
   import favicon from '$lib/assets/favicon.svg';
+  import { themeStore } from '$lib/stores/theme.svelte';
   import '../app.css';
 
   let { children } = $props();
