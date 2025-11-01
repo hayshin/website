@@ -1,23 +1,13 @@
 <script lang="ts">
-  import type { Snippet } from 'svelte';
   import * as m from '$lib/paraglide/messages';
-
-  interface Props {
-    systemName?: string;
-    systemInfoProp?: Record<string, string | Snippet>;
-    logo?: string;
-    alt?: string;
-  }
 
   import Logo from '$lib/components/neofetch/logo.svelte';
   import SystemInfo from '$lib/components/neofetch/system-info.svelte';
   import Uptime from '$lib/components/neofetch/uptime.svelte';
   import LanguageSwitcher from '$lib/components/neofetch/language-switcher.svelte';
 
-  let {
-    systemName = m.neofetch_system_name(),
-    systemInfoProp,
-    logo = `
+  const systemName = m.neofetch_system_name();
+  const logo = `
             █████           █████
           ██████          ██████
         ██████          ██████
@@ -32,32 +22,29 @@
         ██████          ██████
           ██████          ██████
             █████           █████
-`,
-    alt = m.neofetch_logo_alt(),
-  }: Props = $props();
-  let systemInfo = $derived(
-    systemInfoProp ?? {
-      [m.neofetch_field_os()]: m.neofetch_value_os(),
-      [m.neofetch_field_host()]: m.neofetch_value_host(),
-      [m.neofetch_field_kernel()]: m.neofetch_value_kernel(),
-      [m.neofetch_field_uptime()]: uptimeSnippet,
-      [m.neofetch_field_shell()]: m.neofetch_value_shell(),
-      [m.neofetch_field_theme()]: m.neofetch_value_theme(),
-      [m.neofetch_field_role()]: m.neofetch_value_role(),
-      [m.neofetch_field_languages()]: m.neofetch_value_languages(),
-      [m.neofetch_field_packages()]: m.neofetch_value_packages(),
-      [m.neofetch_field_memory()]: m.neofetch_value_memory(),
-      [m.neofetch_field_cpu()]: m.neofetch_value_cpu(),
-      [m.neofetch_field_gpu()]: m.neofetch_value_gpu(),
-      [m.neofetch_field_disk()]: m.neofetch_value_disk(),
-      [m.neofetch_field_location()]: m.neofetch_value_location(),
-      [m.neofetch_field_local_ip()]: m.neofetch_value_local_ip(),
-      [m.neofetch_field_locale()]: localeSnippet,
-      [m.neofetch_field_email()]: email,
-      [m.neofetch_field_links()]: links,
-    },
-  );
-  logo = logo.replace(/^\n+|\n+$/g, ''); // Remove leading and trailing newlines
+`.replace(/^\n+|\n+$/g, ''); // Remove leading and trailing newlines
+  const alt = m.neofetch_logo_alt();
+
+  let systemInfo = {
+    [m.neofetch_field_os()]: m.neofetch_value_os(),
+    [m.neofetch_field_host()]: m.neofetch_value_host(),
+    [m.neofetch_field_kernel()]: m.neofetch_value_kernel(),
+    [m.neofetch_field_uptime()]: uptimeSnippet,
+    [m.neofetch_field_shell()]: m.neofetch_value_shell(),
+    [m.neofetch_field_theme()]: m.neofetch_value_theme(),
+    [m.neofetch_field_role()]: m.neofetch_value_role(),
+    [m.neofetch_field_languages()]: m.neofetch_value_languages(),
+    [m.neofetch_field_packages()]: m.neofetch_value_packages(),
+    [m.neofetch_field_memory()]: m.neofetch_value_memory(),
+    [m.neofetch_field_cpu()]: m.neofetch_value_cpu(),
+    [m.neofetch_field_gpu()]: m.neofetch_value_gpu(),
+    [m.neofetch_field_disk()]: m.neofetch_value_disk(),
+    [m.neofetch_field_location()]: m.neofetch_value_location(),
+    [m.neofetch_field_local_ip()]: m.neofetch_value_local_ip(),
+    [m.neofetch_field_locale()]: localeSnippet,
+    [m.neofetch_field_email()]: email,
+    [m.neofetch_field_links()]: links,
+  };
 </script>
 
 {#snippet links()}
