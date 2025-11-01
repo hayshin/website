@@ -179,16 +179,16 @@
   @media (max-width: 768px) {
     .terminal {
       width: calc(100vw - 2ch);
-      height: 100vh; /* Fallback for older browsers */
-      height: 100svh; /* Small viewport height accounts for browser UI */
-      max-height: calc(100svh - 2ch); /* Ensure some spacing from edges */
+      /* Use dvh (dynamic viewport) and subtract margins and safe areas */
+      height: calc(100dvh - 2ch - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
       margin-block: 1ch; /* Add vertical margin for mobile */
+      box-sizing: border-box; /* Include padding in height calculation */
     }
 
     .output {
       /* Ensure scrolling works well on mobile */
       -webkit-overflow-scrolling: touch;
-      padding-bottom: calc(1ch + env(safe-area-inset-bottom)); /* Extra padding for safe areas */
+      padding-bottom: 1ch; /* Extra padding at bottom for better visibility */
     }
   }
 

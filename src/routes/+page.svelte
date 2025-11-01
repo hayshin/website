@@ -47,6 +47,14 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding-bottom: env(safe-area-inset-bottom);
+    padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px) 0;
+  }
+
+  /* On mobile, adjust container for better terminal visibility */
+  @media (max-width: 768px) {
+    .container {
+      min-height: 100dvh; /* Dynamic viewport height adjusts for keyboard */
+      padding: 0;
+    }
   }
 </style>
