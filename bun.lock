@@ -8,6 +8,7 @@
         "@webtui/plugin-nf": "^0.1.1",
         "@webtui/theme-everforest": "^0.0.3",
         "@webtui/theme-gruvbox": "^0.0.1",
+        "@webtui/theme-vitesse": "^0.0.1",
         "svelte-persisted-store": "^0.12.0",
       },
       "devDependencies": {
@@ -282,6 +283,8 @@
     "@webtui/theme-everforest": ["@webtui/theme-everforest@0.0.3", "", {}, "sha512-9Xyi8KN0edyAJO3XBdrNT9q/inm7g/pf93WMBo8EqUpO+GOZH2ei58ktf7Nj1L1cGqi7mRj3S4kvfIDlfBe+RQ=="],
 
     "@webtui/theme-gruvbox": ["@webtui/theme-gruvbox@0.0.1", "", {}, "sha512-V4771VzVdriQg4gUMG0SbhtzB/4tebe5HyY1z21S8ib25i+fm6BNZearwhL+SwkS4T4teK+991uaLogJXiR+gg=="],
+
+    "@webtui/theme-vitesse": ["@webtui/theme-vitesse@0.0.1", "", {}, "sha512-emiJ2qsRAIxoJUcPx9K8DqMNA7LgbVD8lN772O00cY2Z6wqNiBl1Zn5liP9CJkZH2W6tMBx8iW1kBoboH0n0Pw=="],
 
     "acorn": ["acorn@8.15.0", "", { "bin": { "acorn": "bin/acorn" } }, "sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg=="],
 

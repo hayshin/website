@@ -50,6 +50,7 @@
     "@webtui/plugin-nf": "^0.1.1",
     "@webtui/theme-everforest": "^0.0.3",
     "@webtui/theme-gruvbox": "^0.0.1",
+    "@webtui/theme-vitesse": "^0.0.1",
     "svelte-persisted-store": "^0.12.0"
   }
 }
