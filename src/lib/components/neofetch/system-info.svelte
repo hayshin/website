@@ -9,7 +9,10 @@
   const { systemName, systemInfo }: Props = $props();
 </script>
 
-<div class="system-info-container">
+<div
+  class="system-info-container"
+  {...{ 'is-': 'typography-block' }}
+>
   <h1 class="system-name">{systemName}</h1>
   <p>-------------</p>
   <dl class="system-info">
@@ -49,16 +52,5 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
     user-select: text;
-  }
-
-  .system-info dd :global(a.external-link) {
-    color: var(--gb-blue, var(--aqua, var(--cyan, var(--nord7))));
-    text-decoration: underline;
-  }
-
-  .system-info dd :global(a.email-link),
-  .system-info dd :global(a.locale-link) {
-    color: inherit;
-    text-decoration: underline;
   }
 </style>
