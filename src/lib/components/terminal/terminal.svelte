@@ -43,6 +43,9 @@
         output =
           'Available commands:\n  about - Show information about me\n  help - Show this help message\n  clear - Clear the terminal';
         break;
+      case 'today':
+        output = 'Today is Denis birthday! Congratulations, my dear friend!'
+        break;
       case 'clear':
         commandHistory = [];
         currentCommand = '';
